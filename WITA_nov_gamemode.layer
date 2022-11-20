@@ -1,0 +1,166 @@
+SCR_GameModeEditor : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
+ components {
+  SCR_ArsenalManagerComponent "{57155C58179F516B}" {
+  }
+  SCR_CompositionSlotManagerComponent "{56C2DDA631D5EE38}" {
+  }
+  SCR_EditorRespawnBriefingComponent "{570245454BF91285}" {
+   m_Info SCR_FormatUIInfo "{57024551E01725D4}" {
+    Icon "{8485D33991424756}UI/Textures/Editor/Logos/Logo_Editor_256x256.edds"
+    m_aDescriptionBlocks {
+     SCR_SubBlockUIName "{57024551DA8DA4E7}" {
+      Name "#AR-EditorRespawnBriefing_Description_1"
+     }
+     SCR_SubBlockUIName "{570245502546615D}" {
+      Name "<br/>"
+     }
+     SCR_SubBlockUIName "{57024551D989EDAF}" {
+      Name "#AR-EditorRespawnBriefing_Description_2"
+     }
+     SCR_SubBlockUIName "{589EE51D327B1C2E}" {
+      Name "<br/>"
+     }
+     SCR_ActionBlockUIName "{57024551BA969346}" {
+      Name "#AR-EditorRespawnBriefing_Description_4"
+      m_iDevice "Mouse & Keyboard"
+      m_sActionName "ShowScoreboard"
+     }
+     SCR_ActionBlockUIName "{5868C2E91D4E5713}" {
+      Name "#AR-EditorRespawnBriefing_Description_5"
+      m_iDevice Gamepad
+      m_sActionName "MenuOpen"
+     }
+    }
+   }
+   m_SimpleBriefingBackground "{3C50D67D082BA322}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_2_UI.edds"
+   m_InfoGameMaster SCR_FormatUIInfo "{59188E6A004A529C}" {
+    Icon "{8485D33991424756}UI/Textures/Editor/Logos/Logo_Editor_256x256.edds"
+    m_aDescriptionBlocks {
+     SCR_SubBlockUIName "{59188E6BCF638E93}" {
+      Name "#AR-EditorRespawnBriefing_Description_GameMaster_1"
+     }
+     SCR_SubBlockUIName "{59188E6BF7C70F61}" : "{D7B219D54165E4B4}Configs/Hints/Blocks/LineBreak.conf" {
+     }
+     SCR_SubBlockUIName "{59188E6BFCFADAEC}" {
+      Name "#AR-EditorRespawnBriefing_Description_GameMaster_2"
+     }
+    }
+   }
+   m_InfoHost SCR_FormatUIInfo "{57027889747C45E0}" {
+    Icon "{8485D33991424756}UI/Textures/Editor/Logos/Logo_Editor_256x256.edds"
+    m_aDescriptionBlocks {
+     SCR_SubBlockUIName "{57027889747C4414}" {
+      Name "#AR-EditorRespawnBriefing_Description_1"
+     }
+     SCR_SubBlockUIName "{5916F8D9F21BC382}" : "{D7B219D54165E4B4}Configs/Hints/Blocks/LineBreak.conf" {
+     }
+     SCR_SubBlockUIName "{589E84D2B18F57ED}" {
+      Name "#AR-EditorRespawnBriefing_Description_3"
+     }
+    }
+   }
+  }
+  SCR_HintManagerComponent "{5702B54C6CBC9D7F}" {
+   m_aConditionLists {
+    SCR_HintConditionList "{5702B60460CC2467}" : "{AABAFA01D7DCE9D0}Configs/Hints/GameMode_Editor.conf" {
+    }
+   }
+  }
+  SCR_InitWeatherComponent "{58DCAB6D83A0CB17}" {
+   m_sInitialStartingWeatherId "Cloudy"
+   m_iSetWeatherConstant 1
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{09F7AAA14A642683}Configs/NameTags/NametagFriendlies.conf"
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_bShowPlayerLeftNotification 0
+  }
+  SCR_PlayerPenaltyComponent "{59189C7AAF024B39}" {
+   m_iFriendlyPlayerKillPenalty 1
+   m_iKickPenaltyLimit 6
+   m_iBanDuration 1800
+   m_iPenaltySubstractionPeriod 900
+   m_iPenaltySubstractionPoints 2
+  }
+  SCR_PlayerSpawnPointManagerComponent "{56C2DDA69EF94C6D}" {
+   m_SpawnPointPrefab "{456EFDDA59DD6EB2}Prefabs/MP/PlayerRadioSpawnPoint.et"
+   m_bEnablePlayerSpawnPoints 0
+  }
+  SCR_RespawnMenuHandlerComponent "{56C2E97AB5B2AC0C}" {
+   m_bAllowFactionChange 0
+   m_bAllowLoadoutSelection 0
+   m_sFactionMenuMessage "Waidmanns Heil!"
+  }
+  SCR_RespawnTimerComponent "{56C2DDA6EE0E4071}" {
+  }
+  SCR_SaveLoadComponent "{58FA739CBE3E9FC5}" {
+   m_Struct SCR_MissionStruct "{590C7884C526BCDD}" {
+    m_EditorStruct SCR_EditorStruct "{590C7881BB954DA4}" {
+     m_AttributeList SCR_EditorAttributeList "{590C7881C296FA7D}" : "{F3D6C6D25642352C}Configs/Editor/AttributeLists/Edit.conf" {
+     }
+    }
+   }
+   m_iAutosavePeriod 600
+  }
+  SCR_ScoringSystemComponent "{56C2DDA6F5A5E41B}" {
+  }
+  SCR_VotingManagerComponent "{5650BB6B6089393A}" {
+   m_aVotingTemplates {
+    SCR_VotingEditorIn "{58D06C7270F3CE2C}" : "{9DE543906BEAB993}Configs/Voting/EditorIn.conf" {
+    }
+    SCR_VotingEditorOut "{58D06C7271BA2FDE}" : "{FF27A5C582C16A88}Configs/Voting/EditorOut.conf" {
+    }
+   }
+  }
+ }
+ coords 4884.55 28.595 11778.81
+ PlayerControllerPrefab "{A1AE127F16DD352E}Prefabs/Characters/Core/DefaultPlayerControllerMP_Factions.et"
+ m_bAutoInitEditor 0
+ m_GameMasterTarget NOBODY
+ {
+  SCR_FactionManager FactionManager_Editor1 : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
+   Factions {
+    SCR_Faction "{56DEAC40D2DBC8B1}" {
+     m_bIsPlayable 1
+    }
+    SCR_Faction "{56DEAC40D132400B}" {
+     m_bIsPlayable 1
+    }
+   }
+   m_bCanChangeFactionsPlayable 0
+  }
+  RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+  }
+  ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+  }
+  SCR_EditorSettingsEntity {
+   coords 0 0 0
+   m_bIsUnlimitedEditorLegal 1
+  }
+  SCR_GarbageManager {
+   coords 0 0 0
+   CharacterLifetime 600
+   VehicleLifetime 1800
+   ItemLifetime 300
+   m_bOnlyDestroyed 1
+  }
+  SCR_BaseTaskManager : "{87208DAD6F3C0DE2}Prefabs/MP/Managers/Tasks/TaskManager_Editor.et" {
+  }
+ }
+}
+SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+ coords 4894.908 28.595 11794.152
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{5AE4DA1FC11F8BF9}" {
+   m_sLoadoutName "Hunter"
+   m_sLoadoutResource "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{5AE4DA1F0D3693B2}" {
+   m_sLoadoutName "Agent"
+   m_sLoadoutResource "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+   m_sAffiliatedFaction "FIA"
+  }
+ }
+}
