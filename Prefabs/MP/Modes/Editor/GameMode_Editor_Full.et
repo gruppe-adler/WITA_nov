@@ -1,0 +1,28 @@
+SCR_GameModeEditor : "{D2DE7F43D48A3667}Prefabs/MP/Modes/Editor/GameMode_Editor.et" {
+ ID "56B2B479C6B96951"
+ {
+  SCR_FactionManager FactionManager_Editor1 : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
+   ID "5AE93AA1492482F0"
+  }
+  RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+   ID "5AE93AA1492482CD"
+  }
+  ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+   ID "5AE93AA1492482CF"
+  }
+  SCR_GarbageManager {
+   ID "5AE93AA14924ACB3"
+   coords 0 0 0
+   CharacterLifetime 600
+   VehicleLifetime 1800
+   ItemLifetime 300
+   m_bOnlyDestroyed 1
+  }
+  SCR_BaseTaskManager : "{87208DAD6F3C0DE2}Prefabs/MP/Managers/Tasks/TaskManager_Editor.et" {
+   ID "5AE93AA14924ACB6"
+  }
+  SCR_LoadoutManager : "{B54D08AEA74A5354}Prefabs/MP/Managers/Loadouts/LoadoutManager_Editor.et" {
+   ID "5AE93AA14924ACB9"
+  }
+ }
+}
