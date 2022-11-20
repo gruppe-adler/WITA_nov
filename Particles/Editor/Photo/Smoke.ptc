@@ -1,0 +1,43 @@
+EffectDef {
+ Emitters {
+  EmitterDef sparks {
+   ShapeType Ellipse
+   ShapeSize 700 700 5000
+   ConeAngle 360 7 7
+   MaxNum 1000
+   BirthRate 100
+   BirthRateRND 1
+   BirthRateVel 0
+   Offset 0 0 0
+   LocalTransform 1
+   Material "{D9FC42124DBB8845}Particles/_Materials/Fire/Base_Sparks_06.emat"
+   StretchMultiplier 250
+   StreakFullUV 1
+   SizeMultiplier 10
+   SizeRND 0.5
+   ScaleX 0.1
+   ScaleY 0.1
+   VelAngle 1
+   Velocity 20
+   VelocityRND 0
+   AirResistanceRND 0
+   WindInfluence 0
+   ParentVelRelToAir 0
+   GravityMultiplyRND 0.1
+   Spring 0
+   RandomFrame 1
+   Lifetime 1
+   LifetimeRND 1
+   Color {
+    0 1 1 1 0.115 0.963 0.67 0.084 1 0.986 0.415 0.415
+   }
+   Alpha {
+    0 0 0.441 0.614 1 0
+   }
+   Size {
+    0.079 0 0.265 0.928 1 0
+   }
+   EmittingTime 1000000
+  }
+ }
+}
