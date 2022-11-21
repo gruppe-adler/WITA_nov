@@ -1,4 +1,4 @@
-SCR_BaseGameMode : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
+SCR_GameModeEditor : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
  components {
   SCR_ArsenalManagerComponent "{57155C58179F516B}" {
   }
@@ -111,6 +111,52 @@ SCR_BaseGameMode : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
    }
   }
  }
- coords 4877.145 28.595 11771.414
+ coords 4877.223 28.595 11771.092
  PlayerControllerPrefab "{A1AE127F16DD352E}Prefabs/Characters/Core/DefaultPlayerControllerMP_Factions.et"
+ m_bAutoInitEditor 0
+ {
+  SCR_FactionManager FactionManager_Editor1 : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
+   Factions {
+    SCR_Faction "{56DEAC40D2DBC8B1}" {
+     m_bIsPlayable 1
+    }
+    SCR_Faction "{56DEAC40D132400B}" {
+     m_bIsPlayable 1
+    }
+   }
+   m_bCanChangeFactionsPlayable 0
+  }
+  RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+  }
+  ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+  }
+  SCR_EditorSettingsEntity {
+   coords 0 0 0
+   m_bIsUnlimitedEditorLegal 1
+  }
+  SCR_GarbageManager {
+   coords 0 0 0
+   CharacterLifetime 600
+   VehicleLifetime 1800
+   ItemLifetime 300
+   m_bOnlyDestroyed 1
+  }
+  SCR_LoadoutManager {
+   Flags 0
+   m_aPlayerLoadouts {
+    SCR_FactionPlayerLoadout "{5AE93AA179F0E5DA}" {
+     m_sLoadoutName "Agent"
+     m_sLoadoutResource "{4926B6865022D628}Prefabs/Characters/Factions/INDFOR/FIA/Agent.et"
+     m_sAffiliatedFaction "FIA"
+    }
+    SCR_FactionPlayerLoadout "{5AE93AA1732CB235}" {
+     m_sLoadoutName "Hunter"
+     m_sLoadoutResource "{9B54A4F4C741D860}Prefabs/Characters/Factions/BLUFOR/US_Army/Hunter.et"
+     m_sAffiliatedFaction "US"
+    }
+   }
+  }
+  SCR_BaseTaskManager : "{87208DAD6F3C0DE2}Prefabs/MP/Managers/Tasks/TaskManager_Editor.et" {
+  }
+ }
 }
