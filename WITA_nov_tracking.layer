@@ -89,7 +89,6 @@ $grp ScriptedGameTriggerEntity {
   "    }"
   TriggerShapeType Sphere
   SphereRadius 10000
-  DrawShape 1
   TriggerActivationType "All changes"
   PeriodicQueries 1
   ClassFilter "ChimeraCharacter"
