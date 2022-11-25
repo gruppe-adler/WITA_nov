@@ -43,13 +43,8 @@ $grp ScriptedGameTriggerEntity {
  endGameTrigger {
   coords 4825.547 28.289 11698.838
   userScript "	// code here"\
-  "	protected int m_iCount; // keep count of enemies"\
-  "	protected float m_duration;"\
-  "	"\
-  "	void Start(float timeNow)"\
-  "	{"\
-  "		m_startTime = timeNow;"\
-  "	}"\
+  "	protected bool fia_alive = true; // keep count of enemies"\
+  "	protected float m_duration = 0.0;"\
   "	"\
   "	float GetDuration()"\
   "	{"\
@@ -73,7 +68,7 @@ $grp ScriptedGameTriggerEntity {
   "    // Set up the filter"\
   "    override bool ScriptedEntityFilterForQuery(IEntity ent) {"\
   "        SCR_ChimeraCharacter cc = SCR_ChimeraCharacter.Cast(ent);"\
-  "		SetDuration(GetDuration()++);"\
+  "		"\
   "        if (!cc) return false; // If the entity is not a person, filter it out"\
   "        if (cc.GetFactionKey() != \"FIA\") return false; // If the entity does not have the Faction key of USSR, filter it out"\
   "        if (!IsAlive(cc)) return false; // If the entity is dead, filter it out"\
@@ -81,19 +76,20 @@ $grp ScriptedGameTriggerEntity {
   "    }"\
   " "\
   "    override void OnActivate(IEntity ent)"\
-  "    {"\
-  "        ++m_iCount; // When activated (i.e. when an alive USSR soldier entity enters), add 1 to the number m_iCount"\
+  "    {	"\
+  "		float tempDuration = GetDuration();"\
+  "		++tempDuration;"\
+  "		SetDuration(tempDuration);"\
+  "        // do nothing but count time"\
   "		PrintFormat(\"FIA members alive: %1\", m_iCount);"\
-  "		float startTime = 0.0;"\
-  "		Start(startTime);"\
   "    }"\
   " "\
   "    override void OnDeactivate(IEntity ent)"\
   "    {        "\
-  "        --m_iCount; // When deactivated (i.e. if the soldier leaves or dies) take away 1 to the number m_iCount"\
+  "        // exit everything"\
+  "		fia_alive = false;"\
   "		PrintFormat(\"FIA members alive: %1\", m_iCount);"\
-  "        if (m_iCount <= 0) // if m_iCount is now at 0 (or less than 0), run the OnEmptied function below."\
-  "            OnEmptied();"\
+  "        OnEmptied();"\
   "    }"\
   " "\
   "    void OnEmptied()"\
@@ -104,11 +100,11 @@ $grp ScriptedGameTriggerEntity {
   "        gameMode.EndGameMode(SCR_GameModeEndData.CreateSimple(SCR_GameModeEndData.ENDREASON_EDITOR_FACTION_VICTORY, -1, usIndex)); // End the mission!"\
   "		"\
   "		float elapsedTime = GetDuration();"\
-  "		PrintFormat(\"Endgame triggered: %1 - time elapsed: %2\", faction, elapsedTime);"\
+  "		PrintFormat(\"Endgame triggered: %1 - time elapsed: %2\", faction, elapsedTime/60);"\
   "    }"
   TriggerShapeType Sphere
   SphereRadius 10000
-  TriggerActivationType "All changes"
+  TriggerActivationType "Every query"
   PeriodicQueries 1
   ClassFilter "ChimeraCharacter"
  }
