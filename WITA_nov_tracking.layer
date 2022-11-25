@@ -44,6 +44,22 @@ $grp ScriptedGameTriggerEntity {
   coords 4825.547 28.289 11698.838
   userScript "	// code here"\
   "	protected int m_iCount; // keep count of enemies"\
+  "	protected float m_duration;"\
+  "	"\
+  "	void Start(float timeNow)"\
+  "	{"\
+  "		m_startTime = timeNow;"\
+  "	}"\
+  "	"\
+  "	float GetDuration()"\
+  "	{"\
+  "		return m_duration;"\
+  "	}"\
+  "	"\
+  "	void SetDuration(float duration)"\
+  "	{"\
+  "		m_duration = duration;"\
+  "	}"\
   "	"\
   "	protected bool IsAlive(IEntity entity)"\
   "	{"\
@@ -57,7 +73,7 @@ $grp ScriptedGameTriggerEntity {
   "    // Set up the filter"\
   "    override bool ScriptedEntityFilterForQuery(IEntity ent) {"\
   "        SCR_ChimeraCharacter cc = SCR_ChimeraCharacter.Cast(ent);"\
-  "		"\
+  "		SetDuration(GetDuration()++);"\
   "        if (!cc) return false; // If the entity is not a person, filter it out"\
   "        if (cc.GetFactionKey() != \"FIA\") return false; // If the entity does not have the Faction key of USSR, filter it out"\
   "        if (!IsAlive(cc)) return false; // If the entity is dead, filter it out"\
@@ -68,6 +84,8 @@ $grp ScriptedGameTriggerEntity {
   "    {"\
   "        ++m_iCount; // When activated (i.e. when an alive USSR soldier entity enters), add 1 to the number m_iCount"\
   "		PrintFormat(\"FIA members alive: %1\", m_iCount);"\
+  "		float startTime = 0.0;"\
+  "		Start(startTime);"\
   "    }"\
   " "\
   "    override void OnDeactivate(IEntity ent)"\
@@ -85,7 +103,8 @@ $grp ScriptedGameTriggerEntity {
   "        int usIndex = GetGame().GetFactionManager().GetFactionIndex(faction); // Get the winning faction key's index"\
   "        gameMode.EndGameMode(SCR_GameModeEndData.CreateSimple(SCR_GameModeEndData.ENDREASON_EDITOR_FACTION_VICTORY, -1, usIndex)); // End the mission!"\
   "		"\
-  "		PrintFormat(\"Endgame triggered: %1\", faction);"\
+  "		float elapsedTime = GetDuration();"\
+  "		PrintFormat(\"Endgame triggered: %1 - time elapsed: %2\", faction, elapsedTime);"\
   "    }"
   TriggerShapeType Sphere
   SphereRadius 10000

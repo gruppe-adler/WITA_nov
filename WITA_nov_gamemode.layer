@@ -1,8 +1,68 @@
 SCR_GameModeEditor {
  components {
+  SCR_ArsenalManagerComponent "{5AF33A1C3ADB84E4}" {
+  }
   SCR_CallsignManagerComponent "{5AF33A1C3ADB1A60}" {
   }
+  SCR_CompositionSlotManagerComponent "{5AF33A1C3ADB84E1}" {
+  }
   SCR_DestructionManagerComponent "{5AF33A1C3ADB1A76}" {
+  }
+  SCR_EditorRespawnBriefingComponent "{5AF33A1C3ADA7351}" {
+   m_Info SCR_FormatUIInfo "{5AF33A1C3ADA7301}" {
+    Icon "{8485D33991424756}UI/Textures/Editor/Logos/Logo_Editor_256x256.edds"
+    m_aDescriptionBlocks {
+     SCR_SubBlockUIName "{5AF33A1C3ADB84C9}" {
+      Name "#AR-EditorRespawnBriefing_Description_1"
+     }
+     SCR_SubBlockUIName "{5AF33A1C3ADB84D1}" {
+      Name "<br/>"
+     }
+     SCR_SubBlockUIName "{5AF33A1C3ADB84D8}" {
+      Name "#AR-EditorRespawnBriefing_Description_2"
+     }
+     SCR_SubBlockUIName "{5AF33A1C3ADB8525}" {
+      Name "<br/>"
+     }
+     SCR_ActionBlockUIName "{5AF33A1C3ADB852B}" {
+      Name "#AR-EditorRespawnBriefing_Description_4"
+      m_iDevice "Mouse & Keyboard"
+      m_sActionName "ShowScoreboard"
+     }
+     SCR_ActionBlockUIName "{5AF33A1C3ADB8533}" {
+      Name "#AR-EditorRespawnBriefing_Description_5"
+      m_iDevice Gamepad
+      m_sActionName "MenuOpen"
+     }
+    }
+   }
+   m_SimpleBriefingBackground "{3C50D67D082BA322}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_2_UI.edds"
+   m_InfoGameMaster SCR_FormatUIInfo "{5AF33A1C3ADA7324}" {
+    Icon "{8485D33991424756}UI/Textures/Editor/Logos/Logo_Editor_256x256.edds"
+    m_aDescriptionBlocks {
+     SCR_SubBlockUIName "{5AF33A1C3ADA733E}" {
+      Name "#AR-EditorRespawnBriefing_Description_GameMaster_1"
+     }
+     SCR_SubBlockUIName "{5AF33A1C3ADA733A}" {
+     }
+     SCR_SubBlockUIName "{5AF33A1C3ADA7327}" {
+      Name "#AR-EditorRespawnBriefing_Description_GameMaster_2"
+     }
+    }
+   }
+   m_InfoHost SCR_FormatUIInfo "{5AF33A1C3ADA7350}" {
+    Icon "{8485D33991424756}UI/Textures/Editor/Logos/Logo_Editor_256x256.edds"
+    m_aDescriptionBlocks {
+     SCR_SubBlockUIName "{5AF33A1C3ADA732A}" {
+      Name "#AR-EditorRespawnBriefing_Description_1"
+     }
+     SCR_SubBlockUIName "{5AF33A1C3ADA7356}" {
+     }
+     SCR_SubBlockUIName "{5AF33A1C3ADA7353}" {
+      Name "#AR-EditorRespawnBriefing_Description_3"
+     }
+    }
+   }
   }
   SCR_GameOverScreenManagerComponent "{5AF33A1C3ADB8992}" {
    m_GameOverScreenConfig SCR_GameOverScreenConfig "{5AF33A1C3ADB8990}" {
@@ -239,6 +299,10 @@ SCR_GameModeEditor {
     }
    }
   }
+  SCR_InitWeatherComponent "{5AF33A1C3ADA7359}" {
+   m_sInitialStartingWeatherId "Cloudy"
+   m_iSetWeatherConstant 1
+  }
   SCR_NametagConfigComponent "{5AF33A1C3ADB89A9}" {
    m_sConfigPath "{09F7AAA14A642683}Configs/NameTags/NametagFriendlies.conf"
   }
@@ -281,121 +345,6 @@ SCR_GameModeEditor {
     }
    }
   }
-  SCR_PlayersRestrictionZoneManagerComponent "{5AF33A1C3ADB89F3}" {
-  }
-  SCR_PossessingManagerComponent "{5AF33A1C3ADB89F5}" {
-  }
-  SCR_ReconnectComponent "{5AF33A1C3ADB89EC}" {
-  }
-  SCR_RespawnSystemComponent "{5AF33A1C3ADB89E1}" {
-  }
-  SCR_SaveLoadComponent "{5AF33A1C3ADB8437}" {
-   m_Struct SCR_MissionStruct "{5AF33A1C3ADB960B}" {
-    m_EditorStruct SCR_EditorStruct "{5AF33A1C3ADB960A}" {
-     m_AttributeList SCR_EditorAttributeList "{5AF33A1C3ADB9609}" {
-     }
-    }
-   }
-   m_SaveOnExit 0
-   m_iAutosavePeriod 600
-  }
-  SCR_VotingManagerComponent "{5AF33A1C3ADB8494}" {
-   m_aVotingTemplates {
-    SCR_VotingKick "{5AF33A1C3ADB84B7}" {
-     m_bIsValuePlayerID 1
-     m_fThreshold 0.3
-     m_iMinParticipation 0.3
-     m_Info SCR_VotingUIInfo "{5AF33A1C3ADB841C}" {
-      Name "#AR-Voting_KICK_AddVoteName"
-      m_sStartVotingName "#AR-Voting_KICK_StartVotingName"
-      m_sCancelVotingName "#AR-Voting_KICK_CancelVotingName"
-      m_sStickyNotificationText "#AR-Notification_Sticky_VoteKickPlayer"
-      m_iStartNotificationId VOTING_KICK_START
-      m_iSucceededNotificationId VOTING_KICK_SUCCEED
-      m_iFailedNotificationId VOTING_KICK_FAIL
-     }
-    }
-    SCR_VotingKick "{5AF33A1C3ADB84BA}" {
-     m_Info SCR_VotingUIInfo "{5AF33A1C3ADB84B9}" {
-      m_iStartNotificationId VOTING_KICK_START
-      m_iSucceededNotificationId VOTING_KICK_SUCCEED
-      m_iFailedNotificationId VOTING_KICK_FAIL
-     }
-    }
-    SCR_VotingEditorIn "{5AF33A1C3ADB8480}" {
-    }
-    SCR_VotingEditorOut "{5AF33A1C3ADB848E}" {
-    }
-   }
-  }
-  RplComponent "{5AF33A1C3ADB849E}" {
-   "Rpl State Override" Static
-   Streamable Disabled
-  }
-  SCR_ArsenalManagerComponent "{5AF33A1C3ADB84E4}" {
-  }
-  SCR_CompositionSlotManagerComponent "{5AF33A1C3ADB84E1}" {
-  }
-  SCR_EditorRespawnBriefingComponent "{5AF33A1C3ADA7351}" {
-   m_Info SCR_FormatUIInfo "{5AF33A1C3ADA7301}" {
-    Icon "{8485D33991424756}UI/Textures/Editor/Logos/Logo_Editor_256x256.edds"
-    m_aDescriptionBlocks {
-     SCR_SubBlockUIName "{5AF33A1C3ADB84C9}" {
-      Name "#AR-EditorRespawnBriefing_Description_1"
-     }
-     SCR_SubBlockUIName "{5AF33A1C3ADB84D1}" {
-      Name "<br/>"
-     }
-     SCR_SubBlockUIName "{5AF33A1C3ADB84D8}" {
-      Name "#AR-EditorRespawnBriefing_Description_2"
-     }
-     SCR_SubBlockUIName "{5AF33A1C3ADB8525}" {
-      Name "<br/>"
-     }
-     SCR_ActionBlockUIName "{5AF33A1C3ADB852B}" {
-      Name "#AR-EditorRespawnBriefing_Description_4"
-      m_iDevice "Mouse & Keyboard"
-      m_sActionName "ShowScoreboard"
-     }
-     SCR_ActionBlockUIName "{5AF33A1C3ADB8533}" {
-      Name "#AR-EditorRespawnBriefing_Description_5"
-      m_iDevice Gamepad
-      m_sActionName "MenuOpen"
-     }
-    }
-   }
-   m_SimpleBriefingBackground "{3C50D67D082BA322}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_2_UI.edds"
-   m_InfoGameMaster SCR_FormatUIInfo "{5AF33A1C3ADA7324}" {
-    Icon "{8485D33991424756}UI/Textures/Editor/Logos/Logo_Editor_256x256.edds"
-    m_aDescriptionBlocks {
-     SCR_SubBlockUIName "{5AF33A1C3ADA733E}" {
-      Name "#AR-EditorRespawnBriefing_Description_GameMaster_1"
-     }
-     SCR_SubBlockUIName "{5AF33A1C3ADA733A}" {
-     }
-     SCR_SubBlockUIName "{5AF33A1C3ADA7327}" {
-      Name "#AR-EditorRespawnBriefing_Description_GameMaster_2"
-     }
-    }
-   }
-   m_InfoHost SCR_FormatUIInfo "{5AF33A1C3ADA7350}" {
-    Icon "{8485D33991424756}UI/Textures/Editor/Logos/Logo_Editor_256x256.edds"
-    m_aDescriptionBlocks {
-     SCR_SubBlockUIName "{5AF33A1C3ADA732A}" {
-      Name "#AR-EditorRespawnBriefing_Description_1"
-     }
-     SCR_SubBlockUIName "{5AF33A1C3ADA7356}" {
-     }
-     SCR_SubBlockUIName "{5AF33A1C3ADA7353}" {
-      Name "#AR-EditorRespawnBriefing_Description_3"
-     }
-    }
-   }
-  }
-  SCR_InitWeatherComponent "{5AF33A1C3ADA7359}" {
-   m_sInitialStartingWeatherId "Cloudy"
-   m_iSetWeatherConstant 1
-  }
   SCR_PlayerPenaltyComponent "{5AF33A1C3ADA7376}" {
    Enabled 0
    m_iFriendlyPlayerKillPenalty 1
@@ -408,11 +357,29 @@ SCR_GameModeEditor {
    m_SpawnPointPrefab "{456EFDDA59DD6EB2}Prefabs/MP/PlayerRadioSpawnPoint.et"
    m_bEnablePlayerSpawnPoints 0
   }
+  SCR_PlayersRestrictionZoneManagerComponent "{5AF33A1C3ADB89F3}" {
+  }
+  SCR_PossessingManagerComponent "{5AF33A1C3ADB89F5}" {
+  }
+  SCR_ReconnectComponent "{5AF33A1C3ADB89EC}" {
+  }
   SCR_RespawnMenuHandlerComponent "{5AF33A1C3ADA7364}" {
    m_bAllowFactionChange 0
    m_sFactionMenuMessage "Only one player allowed on Agent side"
   }
+  SCR_RespawnSystemComponent "{5AF33A1C3ADB89E1}" {
+  }
   SCR_RespawnTimerComponent "{5AF33A1C3ADA7361}" {
+  }
+  SCR_SaveLoadComponent "{5AF33A1C3ADB8437}" {
+   m_Struct SCR_MissionStruct "{5AF33A1C3ADB960B}" {
+    m_EditorStruct SCR_EditorStruct "{5AF33A1C3ADB960A}" {
+     m_AttributeList SCR_EditorAttributeList "{5AF33A1C3ADB9609}" {
+     }
+    }
+   }
+   m_SaveOnExit 0
+   m_iAutosavePeriod 600
   }
   SCR_ScoringSystemComponent "{5AF33A1C3ADA736D}" {
    m_iKillScoreMultiplier 0
@@ -420,11 +387,19 @@ SCR_GameModeEditor {
    m_iSuicideScoreMultiplier 0
    m_iObjectiveScoreMultiplier 0
   }
+  SCR_VotingManagerComponent "{5AF33A1C3ADB8494}" {
+   Enabled 0
+  }
+  RplComponent "{5AF33A1C3ADB849E}" {
+   "Rpl State Override" Static
+   Streamable Disabled
+  }
  }
  coords 4709.333 27.855 11125.548
  Flags 0
  PlayerControllerPrefab "{A1AE127F16DD352E}Prefabs/Characters/Core/DefaultPlayerControllerMP_Factions.et"
  m_bAutoInitEditor 0
+ m_GameMasterTarget NOBODY
  {
   SCR_FactionManager FactionManager_Editor1 {
    components {

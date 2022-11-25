@@ -1,20 +1,59 @@
 SCR_PlayerController SCR_PlayerController1 {
  coords 4840.819 28.198 11688.884
 }
-$grp SCR_SpawnPoint : "{2B1758F237E4820E}Prefabs/MP/Spawning/SpawnPoint_FIA.et" {
+$grp SCR_SpawnPoint {
  {
+  components {
+   Hierarchy "{5AF346F7CDE70FA2}" {
+   }
+   SCR_MapDescriptorComponent "{5AF346F7CDE70F8F}" {
+    DisplayName "Agent Spawn"
+    VisibleOnMap 0
+    MainType Spawnpoint
+    Scale 0
+    Faction 1
+   }
+   RplComponent "{5AF346F7CDE70F83}" {
+    "Self Insert" 0
+    Streamable Disabled
+   }
+  }
   coords 4855.663 111.294 8115.155
   angleX -2.681
   angleY 2.632
   angleZ -0.123
+  m_fNoPlayerRadius 2
+  m_fNoSightRadius 0
+  m_sFaction "FIA"
+  m_Info SCR_UIInfo "{5AF346F7CDE70F45}" {
+   Name "FIA Point"
+   Icon "{B784E694BA4A7D40}UI/Textures/Flags/Everon-flag-base-3it.edds"
+  }
  }
  {
+  components {
+   Hierarchy "{5AF346F7CB7D2DC7}" {
+   }
+   SCR_MapDescriptorComponent "{5AF346F7CB7D2D78}" {
+    DisplayName "Spawn Hunters"
+    VisibleOnMap 1
+    MainType Spawnpoint
+    UnitType Infantry
+    Scale 1
+   }
+   RplComponent "{5AF346F7CB7D2D71}" {
+    "Self Insert" 0
+    Streamable Disabled
+   }
+  }
   coords 4687.275 26.554 11163.05
   angleX -2.681
   angleY 2.632
   angleZ -0.123
+  m_fNoPlayerRadius 2
+  m_fNoSightRadius 0
   m_sFaction "US"
-  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  m_Info SCR_UIInfo "{5AF346F7CB7D2D3D}" {
    Name "US Point"
    Icon "{46FB2FB2C2125A3C}UI/Textures/Flags/US-flag-base-3it.edds"
   }
