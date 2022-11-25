@@ -1,8 +1,3 @@
-SCR_PrefabSpawnPoint {
- coords 4683.872 27.855 11162.348
- m_eType MilitaryVehicles
- m_bSnapToGroud 1
-}
 Vehicle testVehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  components {
   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
@@ -10,17 +5,4 @@ Vehicle testVehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_
   }
  }
  coords 4697.113 27.941 11168.784
-}
-GenericEntity : "{8B2A7FE233A4E2AF}PrefabsEditable/Auto/Systems/Arsenal/ArsenalBoxes/US/E_ArsenalBox_US.et" {
- coords 4682.866 27.828 11167.696
-}
-GenericEntity : "{F4DB717DE35C149E}PrefabsEditable/Auto/Systems/Arsenal/WeaponRacks/E_WeaponRackStandArsenal_US.et" {
- coords 4684.351 27.797 11170.575
- angleY 119.449
- {
-  SCR_WeaponRackSlotEntity {
-   ID "589E95D8B3F84879"
-   m_eSupportedItemTypes 230604
-  }
- }
 }

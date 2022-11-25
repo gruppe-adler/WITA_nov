@@ -1,23 +1,22 @@
 SCR_PlayerController SCR_PlayerController1 {
  coords 4840.819 28.198 11688.884
 }
-SCR_SpawnPoint {
- coords 4698.817 27.967 11163.915
- m_sFaction "FIA"
- m_Info SCR_UIInfo "{5AEB692230F68C87}" {
+$grp SCR_SpawnPoint : "{2B1758F237E4820E}Prefabs/MP/Spawning/SpawnPoint_FIA.et" {
+ {
+  coords 4855.663 111.294 8115.155
+  angleX -2.681
+  angleY 2.632
+  angleZ -0.123
  }
-}
-SCR_SpawnPoint : "{2B1758F237E4820E}Prefabs/MP/Spawning/SpawnPoint_FIA.et" {
- coords 4855.663 111.294 8115.155
- angleX -2.681
- angleY 2.632
- angleZ -0.123
-}
-SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
- components {
-  SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
-   UnitType Infantry
+ {
+  coords 4687.275 26.554 11163.05
+  angleX -2.681
+  angleY 2.632
+  angleZ -0.123
+  m_sFaction "US"
+  m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+   Name "US Point"
+   Icon "{46FB2FB2C2125A3C}UI/Textures/Flags/US-flag-base-3it.edds"
   }
  }
- coords 4690.39 27.994 11169.597
 }
