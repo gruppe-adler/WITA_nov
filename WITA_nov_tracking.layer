@@ -40,7 +40,7 @@ $grp ScriptedGameTriggerEntity {
   "		}	"\
   "	"
  }
- endGameTrigger {
+ EndGameTrigger {
   coords 4825.547 28.289 11698.838
   userScript "	// code here"\
   "	protected bool fia_alive = true; // keep count of enemies"\
@@ -97,10 +97,11 @@ $grp ScriptedGameTriggerEntity {
   "        SCR_BaseGameMode gameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode()); // Get the game mode for the end script"\
   "        Faction faction = GetGame().GetFactionManager().GetFactionByKey(\"US\"); // Get the winning faction Key"\
   "        int usIndex = GetGame().GetFactionManager().GetFactionIndex(faction); // Get the winning faction key's index"\
-  "        gameMode.EndGameMode(SCR_GameModeEndData.CreateSimple(SCR_GameModeEndData.ENDREASON_EDITOR_FACTION_VICTORY, -1, usIndex)); // End the mission!"\
   "		"\
   "		float elapsedTime = GetDuration();"\
-  "		PrintFormat(\"Endgame triggered: %1 - time elapsed: %2\", faction, elapsedTime/60);"\
+  "		PrintFormat(\"Endgame triggered: %1 - time elapsed: %2 min\", faction, elapsedTime/60);"\
+  "		"\
+  "		gameMode.EndGameMode(SCR_GameModeEndData.CreateSimple(SCR_GameModeEndData.ENDREASON_EDITOR_FACTION_VICTORY, -1, usIndex)); // End the mission!"\
   "    }"
   TriggerShapeType Sphere
   SphereRadius 10000

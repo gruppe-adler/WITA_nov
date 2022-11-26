@@ -224,10 +224,11 @@ SCR_GameModeEditor {
       m_GameOverScreenId EDITOR_FACTION_VICTORY
       m_GameOverContentLayout "{E04021BC742BE432}UI/layouts/HUD/GameOver/EndScreen/EndScreenContent_Default.layout"
       m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{5AF33A1C3ADB18F6}" {
-       m_sTitle "#AR-MatchResult_Victory-UC"
+       m_sTitle "Hunters won after %1 min"
        m_sSubtitle "#AR-Campaign_MatchResult"
-       m_sDebriefing "#AR-MatchResult_EditorNeutral_Debrief"
+       m_sDebriefing "Thank you for playing at Gruppe Adler."
        m_sAudioOneShot "SOUND_ONVICTORY"
+       m_sTitleParam "EndGameTrigger.GetDuration()"
       }
       m_OptionalEditorParams SCR_BaseGameOverScreenInfoEditor "{5AF33A1C3ADB188C}" {
        m_bNeedsPlayableFactions 1
@@ -240,10 +241,11 @@ SCR_GameModeEditor {
       m_GameOverScreenId EDITOR_FACTION_DEFEAT
       m_GameOverContentLayout "{E04021BC742BE432}UI/layouts/HUD/GameOver/EndScreen/EndScreenContent_Default.layout"
       m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{5AF33A1C3ADB189C}" {
-       m_sTitle "#AR-MatchResult_Defeat-UC"
+       m_sTitle "Hunters won after %1 min"
        m_sSubtitle "#AR-Campaign_MatchResult"
-       m_sDebriefing "#AR-MatchResult_EditorNeutral_Debrief"
+       m_sDebriefing "Thank you for playing at Gruppe Adler."
        m_sAudioOneShot "SOUND_ONDEFEAT"
+       m_sTitleParam "EndGameTrigger.GetDuration()"
       }
       m_OptionalEditorParams SCR_BaseGameOverScreenInfoEditor "{5AF33A1C3ADB1896}" {
        m_bCanBeSetByGameMaster 0
