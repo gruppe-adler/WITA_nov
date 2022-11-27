@@ -16,3 +16,6 @@ Layer spawns {
 Layer tracking {
  Index 4
 }
+Layer loot {
+ Index 5
+}

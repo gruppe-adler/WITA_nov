@@ -1,0 +1,17 @@
+GenericEntity : "{9F7780325B88C146}loot/AK_loot.et" {
+ ID "5AF6ADC84301A194"
+ coords 0 0 0
+ {
+  GenericEntity {
+   ID "5AF6ADC84301A16E"
+   coords -0.255 -0.003 0.287
+   angleY -10.746
+   angleZ 90
+  }
+  GenericEntity : "{E5912E45754CD421}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Tracer.et" {
+   ID "5AF6ADC3FC6A2C0E"
+   coords -0.168 -0.003 0.457
+   angleZ 90
+  }
+ }
+}

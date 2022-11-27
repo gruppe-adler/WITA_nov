@@ -1,0 +1,908 @@
+$grp Vehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ testVehicle2 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 4493.069 13.852 9479.984
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle3 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 3889.147 15.311 8419.063
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle4 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 4002.96 27.835 7825.242
+  angleY 77.428
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle5 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 4789.977 168.02 6926.761
+  angleY 163.305
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle6 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 4647.365 153.836 7173.286
+  angleY -14.634
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle7 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 7542.913 3.466 6702.429
+  angleY 82.204
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle8 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 7079.75 117.914 6007.438
+  angleY -37.477
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle9 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 6132.496 84.195 5794.447
+  angleY -65.834
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle10 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 5521.154 95.726 6019.324
+  angleY -65.834
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle11 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 5265.767 60.515 5389.935
+  angleY -65.834
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle12 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 2924.876 87.781 6372.01
+  angleY -65.834
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle13 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 2813.545 82.868 6421.964
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle14 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 1231.269 35.886 6001.271
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle15 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 1336.667 41.254 5984.246
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle16 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 998.099 2.844 6032.468
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle17 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 3079.38 118.435 5223.838
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle18 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 2663.141 94.34 5393.738
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle19 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 5061.153 14.999 3987.731
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle20 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 5192.278 7.187 3918.819
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle21 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 5150.939 14.67 4066.464
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle22 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 5796.135 2.005 3541.595
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle23 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 7175.69 137.312 2356.643
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle24 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 7294.805 138.98 2478.375
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle25 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 8211.045 223.322 2197.886
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle26 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 9355.218 56.731 2027.491
+  angleY 150.214
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle27 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 9157.803 66.868 2129.946
+  angleY -97.779
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle28 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 9932.601 3.85 1615.041
+  angleY -97.779
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle29 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 9805.095 8.219 1589.51
+  angleY -97.779
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle30 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 9714.882 12.56 1524.73
+  angleY -123.831
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle31 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 9910.523 295.342 2588.879
+  angleY -123.831
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle32 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 9313.002 244.031 3279.544
+  angleY -123.831
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle33 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 8510.69 177.192 3833.081
+  angleY -175.189
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle34 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 8778.409 197.787 3928.116
+  angleY -175.189
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle35 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 9168.646 31.115 5022.61
+  angleY -175.189
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle36 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 9333.424 3.855 5072.27
+  angleY -175.189
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle37 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 7585.001 80.219 5569.991
+  angleY -175.189
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle38 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 7550.317 82.781 5470.7
+  angleY -175.189
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle39 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 6760.205 90.075 5670.598
+  angleY -175.189
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+ testVehicle40 {
+  components {
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    m_fVehicleDestroyDamage 10408.7
+   }
+  }
+  coords 7252.51 47.078 7687.715
+  angleY -175.189
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};	"\
+  "	"
+ }
+}
+$grp GenericEntity : "{4C7631290BE85E6F}loot/AK_loot2.et" {
+ loot1 {
+  coords 4689.091 27.878 11158.294
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};"\
+  "	"
+ }
+ loot2 {
+  coords 4689.091 27.878 11162.31
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};"\
+  "	"
+ }
+ loot3 {
+  coords 4689.091 27.895 11166.063
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};"\
+  "	"
+ }
+ loot4 {
+  coords 4689.091 27.943 11170.019
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};"\
+  "	"
+ }
+ loot5 {
+  coords 4454.724 13.41 10734.842
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};"\
+  "	"
+ }
+ loot6 {
+  coords 4535.813 18.627 9535.525
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};"\
+  "	"
+ }
+ loot7 {
+  coords 4786.516 165.759 6993.395
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};"\
+  "	"
+ }
+ loot8 {
+  coords 4779.09 165.759 6992.447
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};"\
+  "	"
+ }
+ loot9 {
+  coords 7107.334 113.397 6048.147
+  EOnInit ""\
+  "		RandomGenerator gen = new RandomGenerator();"\
+  "		int randomNumber = gen.RandIntInclusive(0, 100);"\
+  "		"\
+  "		if (randomNumber > 50) {"\
+  "			SCR_EntityHelper.DeleteEntityAndChildren(owner);"\
+  "			Print(\"Deleting this loot\");"\
+  "		} else {"\
+  "			Print(\"Not deleting this loot\");"\
+  "		};"\
+  "	"
+ }
+}

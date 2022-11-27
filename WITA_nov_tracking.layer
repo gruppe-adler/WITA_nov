@@ -81,14 +81,14 @@ $grp ScriptedGameTriggerEntity {
   "		++tempDuration;"\
   "		SetDuration(tempDuration);"\
   "        // do nothing but count time"\
-  "		PrintFormat(\"FIA members alive: %1\", m_iCount);"\
+  "		PrintFormat(\"starting EndgameTrigger\");"\
   "    }"\
   " "\
   "    override void OnDeactivate(IEntity ent)"\
   "    {        "\
   "        // exit everything"\
   "		fia_alive = false;"\
-  "		PrintFormat(\"FIA members alive: %1\", m_iCount);"\
+  "		PrintFormat(\"Agent died.\");"\
   "        OnEmptied();"\
   "    }"\
   " "\

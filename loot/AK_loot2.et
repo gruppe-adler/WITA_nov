@@ -1,0 +1,24 @@
+GenericEntity {
+ ID "5AF6ADC351EB7EBE"
+ coords 4697.937 27.89 11152.764
+ {
+  $grp GenericEntity : "{E5912E45754CD421}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Tracer.et" {
+   {
+    ID "5AF6ADC351EB7E8C"
+    coords -0.191 0.006 -0.175
+    angleY -46.222
+    angleZ 90
+   }
+   {
+    ID "5AF6ADC351EB7EB7"
+    coords -0.12 0.013 0.411
+    angleZ 90
+   }
+  }
+  GenericEntity : "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et" {
+   ID "5AF6ADC351EB7EB3"
+   coords 0 0.007 0
+   angleZ 90
+  }
+ }
+}
