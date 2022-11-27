@@ -1,0 +1,22 @@
+GenericEntity : "{533AC2E8A0F5272A}Prefabs/Structures/BuildingParts/BuildingParts_Base.et" {
+ ID "5111E74D4E7A8DB6"
+ components {
+  SlotManagerComponent "{5AF6E64F7754D500}" {
+   Slots {
+    EntitySlotInfo equipment {
+     Offset 0 1.1717 0.15
+     Angles 0 90 90
+     AutoTransform 0
+     Prefab "{7A82FE978603F137}Prefabs/Weapons/Launchers/RPG7/Launcher_RPG7.et"
+     InheritParentSkeleton 1
+    }
+   }
+   SlotMappers {
+    CompartmentToSlotMapping comp2slot {
+     SlotName "equipment"
+     Coverage 0.1
+    }
+   }
+  }
+ }
+}

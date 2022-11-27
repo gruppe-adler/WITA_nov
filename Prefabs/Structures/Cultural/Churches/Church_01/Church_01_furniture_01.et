@@ -1,0 +1,38 @@
+GenericEntity : "{28411B0C79460DF8}Prefabs/Structures/Core/BuildingFurniture_base.et" {
+ ID "56A8CBB92342240A"
+ components {
+  SlotManagerComponent "{5AF6E6417EE50ED0}" {
+   Slots {
+    EntitySlotInfo rpg {
+     Offset 0.0581 -3.1617 -7.6819
+     Prefab "{7A82FE978603F137}Prefabs/Weapons/Launchers/RPG7/Launcher_RPG7.et"
+     InheritParentSkeleton 1
+    }
+    EntitySlotInfo weapon {
+     Offset 1.5466 10.2 -1.6098
+     Prefab "{3EB02CDAD5F23C82}Prefabs/Weapons/Rifles/SVD/Rifle_SVD.et"
+     InheritParentSkeleton 1
+    }
+    EntitySlotInfo svdammo {
+     Offset 1.5466 10.2 -1.6098
+     Prefab "{9CCB46C6EE632C1A}Prefabs/Weapons/Magazines/Magazine_762x54_SVD_10rnd_Sniper.et"
+     InheritParentSkeleton 1
+    }
+   }
+   SlotMappers {
+    CompartmentToSlotMapping mapper {
+     SlotName "rpg"
+     Coverage 1
+    }
+    CompartmentToSlotMapping svd {
+     SlotName "weapon"
+     Coverage 1
+    }
+    CompartmentToSlotMapping svdammo {
+     SlotName "svdammo"
+     Coverage 1
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,13 @@
+SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Building_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+ }
+ GenerateSlots 1
+ EntitySlots {
+  EntitySlotInfo vehicle {
+   PivotID "Scene_Root"
+   Offset 0 0.35 0
+   Prefab "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+  }
+ }
+}

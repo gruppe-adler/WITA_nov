@@ -1,0 +1,32 @@
+GenericEntity : "{533AC2E8A0F5272A}Prefabs/Structures/BuildingParts/BuildingParts_Base.et" {
+ ID "5111E74D4E7A8DB6"
+ components {
+  SlotManagerComponent "{5AF6E64F26CFCC26}" {
+   Slots {
+    EntitySlotInfo weapon {
+     Offset 0 1 0
+     Angles 0 90 0
+     Prefab "{4C7631290BE85E6F}loot/AK_loot2.et"
+     InheritParentSkeleton 1
+    }
+    EntitySlotInfo grenade {
+     Offset -0.5 1.05 0
+     Angles 0 0 0
+     AutoTransform 0
+     Prefab "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et"
+     InheritParentSkeleton 1
+    }
+   }
+   SlotMappers {
+    CompartmentToSlotMapping grenade {
+     SlotName "grenade"
+     Coverage 1
+    }
+    CompartmentToSlotMapping weapon2 {
+     SlotName "weapon"
+     Coverage 1
+    }
+   }
+  }
+ }
+}

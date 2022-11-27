@@ -1,0 +1,46 @@
+SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Building_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SlotManagerComponent "{5AF6E64B644A1256}" {
+   Slots {
+    EntitySlotInfo ammoPM2 {
+     PivotID "Scene_Root"
+     Offset 0.6001 0.2 0
+     Angles 0 0 90
+     Prefab "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
+    }
+    EntitySlotInfo ammoAK2 {
+     PivotID "Scene_Root"
+     Offset 0 0.2 0
+     Angles 0 0 90
+     Prefab "{E5912E45754CD421}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Tracer.et"
+    }
+    EntitySlotInfo ammoPM {
+     PivotID "Scene_Root"
+     Offset 0.2 0.2 0
+     Angles 0 90 90
+     Prefab "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
+    }
+   }
+   SlotMappers {
+    CompartmentToSlotMapping ammomapper {
+     SlotName "ammoPM2"
+     Coverage 1
+    }
+    CompartmentToSlotMapping ammopm {
+     SlotName "ammoPM"
+     Coverage 0.5
+    }
+    CompartmentToSlotMapping ammoAK {
+     SlotName "ammoAK2"
+     Coverage 0.5
+    }
+   }
+  }
+ }
+ SlotBoneMappings {
+  SlotBoneMappingObject "{511EB6CB26EF2451}" {
+   BonePrefix ""
+  }
+ }
+}
