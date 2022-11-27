@@ -1,8 +1,0 @@
-Vehicle testVehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
- components {
-  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
-   m_fVehicleDestroyDamage 10408.7
-  }
- }
- coords 4697.113 27.941 11168.784
-}
