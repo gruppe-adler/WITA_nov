@@ -19,3 +19,6 @@ Layer tracking {
 Layer loot {
  Index 5
 }
+Layer gameUpdate {
+ Index 6
+}
