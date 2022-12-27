@@ -44,6 +44,7 @@ SCR_ChimeraCharacter : "{836E7E39AAC5888B}Prefabs/Characters/Factions/BLUFOR/US_
      Prefab "{BC679F414A0C858B}Prefabs/Characters/Uniforms/Police/police_vest.et"
     }
     LoadoutSlotInfo Back {
+     Enabled 0
      Prefab ""
     }
    }
