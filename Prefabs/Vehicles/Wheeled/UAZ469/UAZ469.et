@@ -1,14 +1,14 @@
-Vehicle : "{1F9BB80C3EC3C891}Prefabs/Vehicles/Core/Wheeled_Car_Base.et" {
+Vehicle : "{99F1610551D54D17}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_base.et" {
  ID "44EC665ABD2FF04B"
  components {
   FuelManagerComponent "{5622A70CD78A9E2C}" {
    FuelNodes {
     SCR_FuelNode "{5622A70CD4036C5A}" {
-     m_fInitialFuelTankState 3
+     m_fInitialFuelTankState 6
     }
     SCR_FuelNode "{5628CA85F51FEF87}" {
      MaxFuel 39
-     m_fInitialFuelTankState 3
+     m_fInitialFuelTankState 6
     }
    }
   }
