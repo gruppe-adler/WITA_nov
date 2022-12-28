@@ -6060,3 +6060,6 @@ SCR_GameModeEditor {
   }
  }
 }
+SCR_VehicleSpawn {
+ coords 4757.907 27.313 11014.137
+}

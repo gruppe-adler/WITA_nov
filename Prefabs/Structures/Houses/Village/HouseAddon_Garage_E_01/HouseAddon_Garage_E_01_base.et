@@ -6,8 +6,10 @@ SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Buil
  EntitySlots {
   EntitySlotInfo vehicle {
    PivotID "Scene_Root"
-   Offset 0 0.35 0
+   Offset 0 0.5 0
    Prefab "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+   ActivatePhysicsOnDetaching 1
+   DeactivatePhysicsOnAtaching 1
   }
  }
 }
