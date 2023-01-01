@@ -1,15 +1,16 @@
 SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
  components {
   NavmeshWorldComponent "{5584F30E67F617AD}" {
-   Enabled 0
    NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
     NavmeshFilesConfig BaseNavmeshFilesConfig "{5AE8B0E39F67B14D}" {
      NavmeshFile "{A07353FE17EB2C49}worlds/MP/Navmeshes/CTI_Campaign_Eden.nmn"
     }
    }
   }
+  NavmeshWorldComponent "{5584F30EEFEE1223}" {
+   Enabled 1
+  }
   SCR_AISettingsComponent "{512CCCD0856CB4B9}" {
-   Enabled 0
   }
  }
  coords 4914.538 28.595 11790.625

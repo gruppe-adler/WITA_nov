@@ -70,7 +70,7 @@ $grp ScriptedGameTriggerEntity {
   "        SCR_ChimeraCharacter cc = SCR_ChimeraCharacter.Cast(ent);"\
   "		"\
   "        if (!cc) return false; // If the entity is not a person, filter it out"\
-  "        if (cc.GetFactionKey() != \"FIA\") return false; // If the entity does not have the Faction key of USSR, filter it out"\
+  "        if (cc.GetFactionKey() != \"FIA\") return false; // If the entity does not have the Faction key of Agent, filter it out"\
   "        if (!IsAlive(cc)) return false; // If the entity is dead, filter it out"\
   "        return true; // Otherwise, include it!"\
   "    }"\

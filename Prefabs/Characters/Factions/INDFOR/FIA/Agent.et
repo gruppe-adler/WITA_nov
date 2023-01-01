@@ -22,10 +22,8 @@ SCR_ChimeraCharacter : "{7A9EE19AB67B298B}Prefabs/Characters/Factions/INDFOR/FIA
    WeaponTemplate "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et"
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
-   Enabled 0
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
-   Enabled 0
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
    WeaponType Handgun
