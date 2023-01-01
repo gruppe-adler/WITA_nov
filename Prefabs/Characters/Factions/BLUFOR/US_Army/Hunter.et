@@ -32,16 +32,14 @@ SCR_ChimeraCharacter : "{836E7E39AAC5888B}Prefabs/Characters/Factions/BLUFOR/US_
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {
-     Prefab "{6D53EC2B875ECE3C}Prefabs/Characters/HeadGear/Police/police_cap.et"
+     Prefab "{BE19A15F1073E7BD}Prefabs/Characters/HeadGear/Hat_Knitted_01/Hat_Knitted_01_black.et"
     }
     LoadoutSlotInfo Jacket {
-     Prefab "{B81CFF0DFEAA4A71}Prefabs/Characters/Uniforms/Police/Police_shirt.et"
     }
     LoadoutSlotInfo Pants {
-     Prefab "{3B90AEF836F40B92}Prefabs/Characters/Uniforms/Police/police_pants.et"
     }
     LoadoutSlotInfo Vest {
-     Prefab "{BC679F414A0C858B}Prefabs/Characters/Uniforms/Police/police_vest.et"
+     Prefab "{9CEA24A1A9CC2675}Prefabs/Characters/Vests/Vest_ALICE/Variants/Vest_ALICE_sniper.et"
     }
     LoadoutSlotInfo Back {
      Enabled 0

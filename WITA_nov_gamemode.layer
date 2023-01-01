@@ -1,4 +1,4 @@
-SCR_GameModeEditor {
+SCR_GameModeEditor gameModeEnt {
  components {
   SCR_ArsenalManagerComponent "{5B37412AD436A2B9}" {
   }
