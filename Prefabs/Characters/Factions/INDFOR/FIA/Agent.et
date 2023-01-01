@@ -52,23 +52,12 @@ SCR_ChimeraCharacter : "{7A9EE19AB67B298B}Prefabs/Characters/Factions/INDFOR/FIA
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
-    ItemsInitConfigurationItem "{5A24CC1119A46C9F}" {
-     TargetStorage "Prefabs/Characters/Uniforms/Pants/joggers_pants_green.et"
-    }
-    ItemsInitConfigurationItem "{5AE8A60619CC8CC1}" {
-     TargetStorage "Prefabs/Characters/Vests/Vest_Type56/Vest_Type56.et"
+    ItemsInitConfigurationItem "{5C43600470CFD8B4}" {
+     TargetStorage "Prefabs/Characters/Vests/Vest_SovietHarness/Vest_SovietHarness_Suspenders.et"
+     TargetPurpose 8
      PrefabsToSpawn {
-      "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
+      "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
      }
-    }
-    ItemsInitConfigurationItem "{5AE8A60619CC8CDB}" {
-     TargetStorage "Prefabs/Characters/Uniforms/Tops/short_sleeve_v2_FU_red.et"
-     PrefabsToSpawn {
-      "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
-     }
-    }
-    ItemsInitConfigurationItem "{5A24CC1119C7787F}" {
-     TargetStorage "Prefabs/Characters/Vests/Vest_Type56/Vest_Type56.et"
     }
    }
   }

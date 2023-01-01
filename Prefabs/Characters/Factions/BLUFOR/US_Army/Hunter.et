@@ -49,24 +49,11 @@ SCR_ChimeraCharacter : "{836E7E39AAC5888B}Prefabs/Characters/Factions/BLUFOR/US_
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
-    ItemsInitConfigurationItem "{5A24B6035F9481AF}" {
-     TargetStorage "Prefabs/Characters/Uniforms/Police/police_pants.et"
-    }
-    ItemsInitConfigurationItem "{5A24B6035F7619E7}" {
-     TargetStorage "Prefabs/Characters/Uniforms/Police/police_vest.et"
-    }
-    ItemsInitConfigurationItem "{5AE8A605C609956F}" {
-     TargetStorage "Prefabs/Characters/Uniforms/Police/police_vest.et"
+    ItemsInitConfigurationItem "{5C4360043C1E6AED}" {
+     TargetStorage "Prefabs/Characters/Vests/Vest_ALICE/Variants/Vest_ALICE_sniper.et"
+     TargetPurpose 8
      PrefabsToSpawn {
-      "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et"
-     }
-    }
-    ItemsInitConfigurationItem "{5AE8A605C6099569}" {
-    }
-    ItemsInitConfigurationItem "{5AE8A605C60E6912}" {
-     TargetStorage "Prefabs/Characters/Uniforms/Police/police_pants.et"
-     PrefabsToSpawn {
-      "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" ""
+      "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et"
      }
     }
    }
