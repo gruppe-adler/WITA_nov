@@ -1,6 +1,127 @@
-SCR_ParticleEmitter AgentSmoke {
- coords 4817.269 27.655 11521.446
- m_EffectPath "{7B4A41DA320475FF}Particles/Editor/Photo/Smoke.ptc"
+SCR_MapLocator WITA_MapLocator {
+ coords 4826.089 27.471 11546.934
+ userScript "	// code here"\
+ "	"\
+ "	override void EOnInit(IEntity owner)"\
+ "	{"\
+ "		if (!GetGame().InPlayMode() || !m_WorldDirections) "\
+ "			return;"\
+ "		// SCR_MapEntity.GetOnMapOpen().Insert(ShowMapHint);"\
+ "		// SCR_MapEntity.GetOnMapClose().Insert(HideMapHint);"\
+ "		"\
+ "		vector mins,maxs;"\
+ "		GetGame().GetWorldEntity().GetWorldBounds(mins, maxs);"\
+ "		"\
+ "		m_iGridSizeX = maxs[0]/3;"\
+ "		m_iGridSizeY = maxs[2]/3;"\
+ "		"\
+ "		// GetGame().GetCallqueue().CallLater(checkForAgentPosition, 2, true, owner)"\
+ "		// proto void CallLater(func fn, int delay = 0, bool repeat = false, void param1 = NULL, void param2 = NULL, void param3 = NULL, void param4 = NULL, void param5 = NULL, void param6 = NULL, void param7 = NULL, void param8 = NULL, void param9 = NULL);"\
+ "	}"\
+ "	"\
+ "	protected void checkForAgentPosition(IEntity owner) {"\
+ "		Print(\"checkForAgentPosition\");"\
+ "		"\
+ "		/*"\
+ "		int id = GetGame().GetPlayerManager().GetPlayers();"\
+ "		"\
+ "		Faction faction = GetGame().GetFactionManager().GetFactionByIndex(\"FIA\");"\
+ "		if (faction) {"\
+ "				string playerFactionKey = faction.GetFactionKey();"\
+ "				private bool isFia;"\
+ "				isFia = playerFactionKey == \"FIA\";"\
+ "				if (isFia == 1) {"\
+ "					CalculateClosestLocation();"\
+ "					GetGame().GetCallqueue().CallLater(CalculateClosestLocation,10000,true);"\
+ "				}"\
+ "		}"\
+ "		*/"\
+ "	}"\
+ "	"\
+ "	override protected void CalculateClosestLocation()"\
+ "	{"\
+ "		SCR_EditableEntityCore core = SCR_EditableEntityCore.Cast(SCR_EditableEntityCore.GetInstance(SCR_EditableEntityCore));"\
+ "	       if (!core)"\
+ "	           return;"\
+ "		ChimeraCharacter player = ChimeraCharacter.Cast(SCR_PlayerController.GetLocalControlledEntity());"\
+ "		if (!player)"\
+ "		{"\
+ "			if (m_wUIHintLayout)"\
+ "			{"\
+ "				m_wUIHintLayout.RemoveFromHierarchy();"\
+ "				m_wUIHintLayout = null;"\
+ "			}"\
+ "			return;"\
+ "		}"\
+ "		vector posPlayer = player.GetOrigin();"\
+ "		"\
+ "		SCR_EditableEntityComponent nearest = core.FindNearestEntity(posPlayer, EEditableEntityType.COMMENT, EEditableEntityFlag.LOCAL);"\
+ "		if (!nearest)"\
+ "			return;"\
+ "		GenericEntity nearestLocation = nearest.GetOwner();"\
+ "		SCR_MapDescriptorComponent mapDescr = SCR_MapDescriptorComponent.Cast(nearestLocation.FindComponent(SCR_MapDescriptorComponent));"\
+ "		string closestLocationName;"\
+ "		if (!mapDescr)"\
+ "			return;"\
+ "		MapItem item = mapDescr.Item();"\
+ "		closestLocationName = item.GetDisplayName();"\
+ ""\
+ "		vector lastLocationPos = nearestLocation.GetOrigin();"\
+ "		float lastDistance = vector.DistanceSqXZ(lastLocationPos, posPlayer);"\
+ "	"\
+ "		LocalizedString closeLocationAzimuth;"\
+ "		vector result = posPlayer - lastLocationPos;"\
+ "		result.Normalize();"\
+ "	"\
+ "		float angle1 = vector.DotXZ(result,vector.Forward);"\
+ "		float angle2 = vector.DotXZ(result,vector.Right);"\
+ "			"\
+ "		if (angle2 > 0)"\
+ "		{"\
+ "			if (angle1 >= angleA)"\
+ "				closeLocationAzimuth = \"#AR-MapLocationHint_DirectionNorth\";"\
+ "			if (angle1 < angleA && angle1 >= angleB )"\
+ "				closeLocationAzimuth = \"#AR-MapLocationHint_DirectionNorthEast\";"\
+ "			if (angle1 < angleB && angle1 >=-angleB)"\
+ "				closeLocationAzimuth = \"#AR-MapLocationHint_DirectionEast\";"\
+ "			if (angle1 < -angleB && angle1 >=-angleA)"\
+ "				closeLocationAzimuth = \"#AR-MapLocationHint_DirectionSouthEast\";"\
+ "			if (angle1 < -angleA)"\
+ "				closeLocationAzimuth = \"#AR-MapLocationHint_DirectionSouth\";"\
+ "		}"\
+ "		else"\
+ "		{"\
+ "			if (angle1 >= angleA)"\
+ "				closeLocationAzimuth = \"#AR-MapLocationHint_DirectionNorth\";"\
+ "			if (angle1 < angleA && angle1 >= angleB )"\
+ "				closeLocationAzimuth = \"#AR-MapLocationHint_DirectionNorthWest\";"\
+ "			if (angle1 < angleB && angle1 >=-angleB)"\
+ "				closeLocationAzimuth = \"#AR-MapLocationHint_DirectionWest\";"\
+ "			if (angle1 < -angleB && angle1 >=-angleA)"\
+ "				closeLocationAzimuth = \"#AR-MapLocationHint_DirectionSouthWest\";"\
+ "			if (angle1 < -angleA)"\
+ "				closeLocationAzimuth = \"#AR-MapLocationHint_DirectionSouth\";"\
+ "		};"\
+ "		"\
+ "		int playerGridPositionX = posPlayer[0]/m_iGridSizeX;"\
+ "		int playerGridPositionY = posPlayer[2]/m_iGridSizeY;"\
+ "		"\
+ "		int playerGridID = GetGridIndex(playerGridPositionX,playerGridPositionY);"\
+ "		m_wUIHintText.SetTextFormat(m_WorldDirections.GetPlayerPositionHint(), m_WorldDirections.GetQuadHint(playerGridID));"\
+ "		if (lastDistance < 40000) {"\
+ "			// m_wUIHintText2.SetTextFormat(\"TEST %1.\", closestLocationName);"\
+ "			SCR_HintManagerComponent hintComponent = SCR_HintManagerComponent.GetInstance();"\
+ "			hintComponent.ShowCustomHint(closestLocationName, \"Agent Location\");"\
+ "		} else"\
+ "		{"\
+ "			// m_wUIHintText2.SetVisible(!closestLocationName.IsEmpty());"\
+ "			// m_wUIHintText2.SetTextFormat(closeLocationAzimuth, closestLocationName);"\
+ "			SCR_HintManagerComponent hintsManager = SCR_HintManagerComponent.GetInstance();"\
+ "        	hintsManager.ShowCustom(closestLocationName, \"Agent Location\");"\
+ "		}"\
+ "	}"
+ m_WorldDirections SCR_MapLocationQuadHint "{5C42FEA1AE6C685A}" {
+ }
 }
 $grp ScriptedGameTriggerEntity {
  AgentTrigger {
@@ -8,36 +129,20 @@ $grp ScriptedGameTriggerEntity {
   TriggerActivationType "Every query"
   PeriodicQueries 1
   OnActivate ""\
-  "		int playerID = GetGame().GetPlayerController().GetPlayerId();"\
+  "		/*"\
+  "		int id = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent);"\
+  "		Faction faction = SCR_RespawnSystemComponent.GetLocalPlayerFaction(id);"\
+  "		if (faction) {"\
+  "				string playerFactionKey = faction.GetFactionKey();"\
+  "				private bool isFia;"\
+  "				isFia = playerFactionKey == \"FIA\";"\
+  "				if (isFia == 1) {"\
+  "					WITA_MapLocator_Class.CalculateClosestLocation();"\
+  "					GetGame().GetCallqueue().CallLater(WITA_MapLocator_Class.CalculateClosestLocation,10000,true);"\
+  "				}"\
+  "		}"\
+  "		*/"\
   "		"\
-  "		if (playerID > 0)"\
-  "		{"\
-  "			SCR_RespawnSystemComponent respawnSystemComponent = SCR_RespawnSystemComponent.GetInstance();"\
-  "			if (respawnSystemComponent)"\
-  "			{"\
-  "				Faction faction = respawnSystemComponent.GetPlayerFaction(playerID);"\
-  "				if (faction) {"\
-  "					string playerFactionKey = faction.GetFactionKey();"\
-  "					private bool isFia;"\
-  "					isFia = playerFactionKey == \"FIA\";"\
-  "					// PrintFormat(\"isFia: %1\",isFia);"\
-  "					"\
-  "					if (isFia == 1) {"\
-  "						IEntity smoke = GetGame().GetWorld().FindEntityByName(\"AgentSmoke\");"\
-  "						IEntity agent2 = SCR_PlayerController.GetLocalControlledEntity();"\
-  "						"\
-  "						if (agent2) {"\
-  "							vector mat = agent2.GetOrigin();"\
-  "							"\
-  "							PrintFormat(\"agent %1\", agent2);	"\
-  "							PrintFormat(\"agentPos %1\", mat);							"\
-  "							smoke.SetOrigin(mat);"\
-  "							smoke.Update();"\
-  "						}		"\
-  "					}			"\
-  "				}				"\
-  "			}"\
-  "		}	"\
   "	"
  }
  EndGameTrigger {
@@ -89,8 +194,17 @@ $grp ScriptedGameTriggerEntity {
   "        // exit everything"\
   "		fia_alive = false;"\
   "		PrintFormat(\"Agent died.\");"\
-  "        OnEmptied();"\
+  "		GetGame().GetCallqueue().CallLater(HintEnd, 10000, false);"\
+  "		GetGame().GetCallqueue().CallLater(OnEmptied, 20000, false);"\
+  "		"\
   "    }"\
+  "	"\
+  "	void HintEnd()"\
+  "	{"\
+  "		float elapsedTime = GetDuration();"\
+  "		string m_elapsedTimeString = string.Format(\"Time elapsed: %1 min\", elapsedTime/60);"\
+  "		SCR_HintManagerComponent.GetInstance().ShowCustomHint(m_elapsedTimeString, \"Hunt Duration\", 3.0); "\
+  "	}"\
   " "\
   "    void OnEmptied()"\
   "    {"\
