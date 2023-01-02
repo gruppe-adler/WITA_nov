@@ -53,8 +53,7 @@ SCR_ChimeraCharacter : "{7A9EE19AB67B298B}Prefabs/Characters/Factions/INDFOR/FIA
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{5C43600470CFD8B4}" {
-     TargetStorage "Prefabs/Characters/Vests/Vest_SovietHarness/Vest_SovietHarness_Suspenders.et"
-     TargetPurpose 8
+     TargetStorage "Prefabs/Characters/Uniforms/Pants_M70.et"
      PrefabsToSpawn {
       "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
      }

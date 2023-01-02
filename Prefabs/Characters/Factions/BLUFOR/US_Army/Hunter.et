@@ -50,8 +50,7 @@ SCR_ChimeraCharacter : "{836E7E39AAC5888B}Prefabs/Characters/Factions/BLUFOR/US_
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{5C4360043C1E6AED}" {
-     TargetStorage "Prefabs/Characters/Vests/Vest_ALICE/Variants/Vest_ALICE_sniper.et"
-     TargetPurpose 8
+     TargetStorage "Prefabs/Characters/Uniforms/Pants_US_BDU.et"
      PrefabsToSpawn {
       "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et"
      }
