@@ -76,9 +76,11 @@ SCR_MapLocator WITA_MapLocator {
  "	"\
  "	"\
  "	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]"\
- "	protected void RpcDo_maplocatorShowHint (string closestLocationName) {"\
+ "	protected void RpcDo_maplocatorShowHint (string closestLocationName, vector agentPosition) {"\
  "		SCR_HintManagerComponent hintComponent = SCR_HintManagerComponent.GetInstance();"\
  "		hintComponent.ShowCustomHint(\"Near \" + closestLocationName, \"Agent Location\", 20);"\
+ "		"\
+ "		SCR_ParticleEmitter fxEffect = SCR_ParticleEmitter.CreateEx(SCR_ParticleEmitterClass, \"{7B4A41DA320475FF}Smoke.ptc\", agentPosition);"\
  "	}"\
  "	"\
  "	protected void CalculateClosestLocation(IEntity playerEnt)"\
@@ -155,16 +157,20 @@ SCR_MapLocator WITA_MapLocator {
  "		int playerGridID = GetGridIndex(playerGridPositionX,playerGridPositionY);"\
  "		if (lastDistance < 40000) {"\
  "			// todo add logic to differentiate here"\
- "			Rpc(RpcDo_maplocatorShowHint, closestLocationName);"\
+ "			Rpc(RpcDo_maplocatorShowHint, closestLocationName, posPlayer);"\
  "			Print(\"sending shit\");"\
  "		} else"\
  "		{"\
- "			Rpc(RpcDo_maplocatorShowHint, closestLocationName);"\
+ "			Rpc(RpcDo_maplocatorShowHint, closestLocationName, posPlayer);"\
  "			Print(\"sending shit\");"\
  "		}"\
  "	}"
  m_WorldDirections SCR_MapLocationQuadHint "{5C42FEA1AE6C685A}" {
  }
+}
+SCR_ParticleEmitter fx_agent {
+ coords 4840.376 27.47 11575.726
+ m_EffectPath "{7B4A41DA320475FF}Particles/Editor/Photo/Smoke.ptc"
 }
 $grp ScriptedGameTriggerEntity {
  AgentTrigger {
