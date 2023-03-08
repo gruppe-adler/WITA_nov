@@ -1,4 +1,8 @@
 SCR_MapLocator WITA_MapLocator {
+ components {
+  RplComponent "{5CD0FDBDF2B3B58E}" {
+  }
+ }
  coords 4826.089 27.471 11546.934
  userScript "	// code here"\
  "	"\
@@ -20,6 +24,14 @@ SCR_MapLocator WITA_MapLocator {
  "  			return;"\
  "		SCR_RespawnSystemComponent respComp = SCR_RespawnSystemComponent.Cast(m_gameMode.FindComponent(SCR_RespawnSystemComponent));"\
  "		if (!respComp)"\
+ "			return;"\
+ "		"\
+ "		bool isServer = true;"\
+ "		RplComponent rplComponent = RplComponent.Cast(m_gameMode.FindComponent(RplComponent));"\
+ "		if (rplComponent && !rplComponent.IsMaster())"\
+ "			isServer = false;"\
+ "		"\
+ "		if (!isServer)"\
  "			return;"\
  "		"\
  "		GetGame().GetCallqueue().CallLater(checkForAgentPosition, 60000, true, respComp)"\
@@ -62,9 +74,16 @@ SCR_MapLocator WITA_MapLocator {
  "	"\
  "	}"\
  "	"\
- "	protected void CalculateClosestLocation(IEntity player)"\
+ "	"\
+ "	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]"\
+ "	protected void RpcDo_maplocatorShowHint (string closestLocationName) {"\
+ "		SCR_HintManagerComponent hintComponent = SCR_HintManagerComponent.GetInstance();"\
+ "		hintComponent.ShowCustomHint(\"Near \" + closestLocationName, \"Agent Location\", 20);"\
+ "	}"\
+ "	"\
+ "	protected void CalculateClosestLocation(IEntity playerEnt)"\
  "	{"\
- "		if (!player)"\
+ "		if (!playerEnt)"\
  "		{"\
  "			if (m_wUIHintLayout)"\
  "			{"\
@@ -78,7 +97,7 @@ SCR_MapLocator WITA_MapLocator {
  "	       if (!core)"\
  "	           return;"\
  "		"\
- "		vector posPlayer = player.GetOrigin();"\
+ "		vector posPlayer = playerEnt.GetOrigin();"\
  "		"\
  "		Print(posPlayer);"\
  "		"\
@@ -134,18 +153,14 @@ SCR_MapLocator WITA_MapLocator {
  "		int playerGridPositionY = posPlayer[2]/m_iGridSizeY;"\
  "		"\
  "		int playerGridID = GetGridIndex(playerGridPositionX,playerGridPositionY);"\
- "		// m_wUIHintText.SetTextFormat(m_WorldDirections.GetPlayerPositionHint(), m_WorldDirections.GetQuadHint(playerGridID));"\
- "		// string m_gridPosition = (m_WorldDirections.GetQuadHint(playerGridID));"\
  "		if (lastDistance < 40000) {"\
- "			// m_wUIHintText2.SetTextFormat(\"TEST %1.\", closestLocationName);"\
- "			SCR_HintManagerComponent hintComponent = SCR_HintManagerComponent.GetInstance();"\
- "			hintComponent.ShowCustomHint(\"Near \" + closestLocationName, \"Agent Location\", 20);"\
+ "			// todo add logic to differentiate here"\
+ "			Rpc(RpcDo_maplocatorShowHint, closestLocationName);"\
+ "			Print(\"sending shit\");"\
  "		} else"\
  "		{"\
- "			// m_wUIHintText2.SetVisible(!closestLocationName.IsEmpty());"\
- "			// m_wUIHintText2.SetTextFormat(closeLocationAzimuth, closestLocationName);"\
- "			SCR_HintManagerComponent hintComponent = SCR_HintManagerComponent.GetInstance();"\
- "			hintComponent.ShowCustomHint(\"Near \" + closestLocationName, \"Agent Location\", 20);"\
+ "			Rpc(RpcDo_maplocatorShowHint, closestLocationName);"\
+ "			Print(\"sending shit\");"\
  "		}"\
  "	}"
  m_WorldDirections SCR_MapLocationQuadHint "{5C42FEA1AE6C685A}" {
