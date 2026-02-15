@@ -1,6 +1,7 @@
 SCR_MapLocator WITA_MapLocator {
  components {
   RplComponent "{5CD0FDBDF2B3B58E}" {
+   Streamable Disabled
   }
  }
  coords 4826.089 27.471 11546.934
@@ -55,13 +56,12 @@ SCR_MapLocator WITA_MapLocator {
  "            // Print(\"Group Member checking\");"\
  "			// Faction factionPlayer = GetGame().GetFactionManager().GetFactionByIndex(player);"\
  "			"\
- "			// not sure if necessary"\
  "			if (!player)"\
- "				return;"\
+ "				continue;"\
  "			"\
  "			Faction factionPlayer = respComp.GetPlayerFaction(player);"\
  "			if (!factionPlayer)"\
- "				return;"\
+ "				continue;"\
  "			Print(factionPlayer.GetFactionName());"\
  "			Print(factionFIA.GetFactionName());"\
  "			"\
@@ -80,7 +80,7 @@ SCR_MapLocator WITA_MapLocator {
  "		SCR_HintManagerComponent hintComponent = SCR_HintManagerComponent.GetInstance();"\
  "		hintComponent.ShowCustomHint(\"Near \" + closestLocationName, \"Agent Location\", 20);"\
  "		"\
- "		SCR_ParticleEmitter fxEffect = SCR_ParticleEmitter.CreateEx(SCR_ParticleEmitterClass, \"{7B4A41DA320475FF}Smoke.ptc\", agentPosition);"\
+ "		SCR_ParticleEmitter fxEffect = SCR_ParticleEmitter.CreateEx(SCR_ParticleEmitterClass, \"{7B4A41DA320475FF}Particles/Editor/Photo/Smoke.ptc\", agentPosition);"\
  "	}"\
  "	"\
  "	protected void CalculateClosestLocation(IEntity playerEnt)"\
@@ -156,13 +156,15 @@ SCR_MapLocator WITA_MapLocator {
  "		"\
  "		int playerGridID = GetGridIndex(playerGridPositionX,playerGridPositionY);"\
  "		if (lastDistance < 40000) {"\
- "			// todo add logic to differentiate here"\
  "			Rpc(RpcDo_maplocatorShowHint, closestLocationName, posPlayer);"\
- "			Print(\"sending shit\");"\
+ "			RpcDo_maplocatorShowHint(closestLocationName, posPlayer);"\
+ "			Print(\"Agent close to location, broadcasting hint with particle\");"\
  "		} else"\
  "		{"\
- "			Rpc(RpcDo_maplocatorShowHint, closestLocationName, posPlayer);"\
- "			Print(\"sending shit\");"\
+ "			string directionHint = closeLocationAzimuth + \" of \" + closestLocationName;"\
+ "			Rpc(RpcDo_maplocatorShowHint, directionHint, posPlayer);"\
+ "			RpcDo_maplocatorShowHint(directionHint, posPlayer);"\
+ "			Print(\"Agent far from location, broadcasting directional hint\");"\
  "		}"\
  "	}"
  m_WorldDirections SCR_MapLocationQuadHint "{5C42FEA1AE6C685A}" {
@@ -195,10 +197,17 @@ $grp ScriptedGameTriggerEntity {
   "	"
  }
  EndGameTrigger {
+  components {
+   RplComponent "{5CD0FDBDF2B3B590}" {
+    Streamable Disabled
+   }
+  }
   coords 4825.547 28.289 11698.838
   userScript "	// code here"\
-  "	protected bool fia_alive = true; // keep count of enemies"\
+  "	protected bool fia_alive = true;"\
   "	protected float m_duration = 0.0;"\
+  "	protected static const string HIGHSCORE_FILE = \"$profile:WITA_highscores.txt\";"\
+  "	protected static const int MAX_HIGHSCORES = 10;"\
   "	"\
   "	float GetDuration()"\
   "	{"\
@@ -218,15 +227,123 @@ $grp ScriptedGameTriggerEntity {
   "		else"\
   "			return true;"\
   "	}"\
+  "	"\
+  "	protected void SaveHighscore(string playerName, float durationSeconds)"\
+  "	{"\
+  "		array<float> times = {};"\
+  "		array<string> names = {};"\
+  "		"\
+  "		FileHandle fileRead = FileIO.FileOpen(HIGHSCORE_FILE, FileMode.READ);"\
+  "		if (fileRead)"\
+  "		{"\
+  "			string line;"\
+  "			while (FileIO.FGets(fileRead, line) >= 0)"\
+  "			{"\
+  "				if (line == \"\")"\
+  "					continue;"\
+  "				int sepIdx = line.IndexOf(\"|\");"\
+  "				if (sepIdx < 0)"\
+  "					continue;"\
+  "				string timeStr = line.Substring(0, sepIdx);"\
+  "				string name = line.Substring(sepIdx + 1, line.Length() - sepIdx - 1);"\
+  "				times.Insert(timeStr.ToFloat());"\
+  "				names.Insert(name);"\
+  "			}"\
+  "			FileIO.FileClose(fileRead);"\
+  "		}"\
+  "		"\
+  "		times.Insert(durationSeconds);"\
+  "		names.Insert(playerName);"\
+  "		"\
+  "		for (int i = 0; i < times.Count() - 1; i++)"\
+  "		{"\
+  "			for (int j = 0; j < times.Count() - i - 1; j++)"\
+  "			{"\
+  "				if (times[j] < times[j + 1])"\
+  "				{"\
+  "					float tmpTime = times[j];"\
+  "					times[j] = times[j + 1];"\
+  "					times[j + 1] = tmpTime;"\
+  "					string tmpName = names[j];"\
+  "					names[j] = names[j + 1];"\
+  "					names[j + 1] = tmpName;"\
+  "				}"\
+  "			}"\
+  "		}"\
+  "		"\
+  "		FileHandle fileWrite = FileIO.FileOpen(HIGHSCORE_FILE, FileMode.WRITE);"\
+  "		if (!fileWrite)"\
+  "			return;"\
+  "		"\
+  "		int count = Math.Min(times.Count(), MAX_HIGHSCORES);"\
+  "		for (int i = 0; i < count; i++)"\
+  "		{"\
+  "			string entry = string.Format(\"%1|%2\", times[i], names[i]);"\
+  "			FileIO.FPrintln(fileWrite, entry);"\
+  "		}"\
+  "		FileIO.FileClose(fileWrite);"\
+  "		PrintFormat(\"WITA: Saved highscore - %1 survived %2 seconds\", playerName, durationSeconds);"\
+  "	}"\
+  "	"\
+  "	protected string FormatHighscores()"\
+  "	{"\
+  "		string result = \"\";"\
+  "		FileHandle file = FileIO.FileOpen(HIGHSCORE_FILE, FileMode.READ);"\
+  "		if (!file)"\
+  "			return \"No highscores yet.\";"\
+  "		"\
+  "		string line;"\
+  "		int rank = 1;"\
+  "		while (FileIO.FGets(file, line) >= 0)"\
+  "		{"\
+  "			if (line == \"\")"\
+  "				continue;"\
+  "			int sepIdx = line.IndexOf(\"|\");"\
+  "			if (sepIdx < 0)"\
+  "				continue;"\
+  "			string timeStr = line.Substring(0, sepIdx);"\
+  "			string name = line.Substring(sepIdx + 1, line.Length() - sepIdx - 1);"\
+  "			float timeSec = timeStr.ToFloat();"\
+  "			float timeMin = timeSec / 60.0;"\
+  "			result = result + string.Format(\"%1. %2 - %3 min\\n\", rank, name, timeMin);"\
+  "			rank++;"\
+  "		}"\
+  "		FileIO.FileClose(file);"\
+  "		"\
+  "		if (result == \"\")"\
+  "			return \"No highscores yet.\";"\
+  "		return result;"\
+  "	}"\
+  "	"\
+  "	protected string GetAgentPlayerName(IEntity ent)"\
+  "	{"\
+  "		if (!ent)"\
+  "			return \"Unknown\";"\
+  "		int playerId = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent);"\
+  "		if (playerId <= 0)"\
+  "			return \"Unknown\";"\
+  "		string name = GetGame().GetPlayerManager().GetPlayerName(playerId);"\
+  "		if (name == \"\")"\
+  "			return \"Unknown\";"\
+  "		return name;"\
+  "	}"\
+  "	"\
+  "	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]"\
+  "	protected void RpcDo_ShowHighscores(string highscoreText, string currentRunText)"\
+  "	{"\
+  "		SCR_HintManagerComponent hintComponent = SCR_HintManagerComponent.GetInstance();"\
+  "		if (hintComponent)"\
+  "			hintComponent.ShowCustomHint(currentRunText + \"\\n\\n--- Highscores ---\\n\" + highscoreText, \"WITA Highscores\", 30);"\
+  "	}"\
   " "\
   "    // Set up the filter"\
   "    override bool ScriptedEntityFilterForQuery(IEntity ent) {"\
   "        SCR_ChimeraCharacter cc = SCR_ChimeraCharacter.Cast(ent);"\
   "		"\
-  "        if (!cc) return false; // If the entity is not a person, filter it out"\
-  "        if (cc.GetFactionKey() != \"FIA\") return false; // If the entity does not have the Faction key of Agent, filter it out"\
-  "        if (!IsAlive(cc)) return false; // If the entity is dead, filter it out"\
-  "        return true; // Otherwise, include it!"\
+  "        if (!cc) return false;"\
+  "        if (cc.GetFactionKey() != \"FIA\") return false;"\
+  "        if (!IsAlive(cc)) return false;"\
+  "        return true;"\
   "    }"\
   " "\
   "    override void OnActivate(IEntity ent)"\
@@ -234,37 +351,42 @@ $grp ScriptedGameTriggerEntity {
   "		float tempDuration = GetDuration();"\
   "		++tempDuration;"\
   "		SetDuration(tempDuration);"\
-  "        // do nothing but count time"\
-  "		PrintFormat(\"starting EndgameTrigger\");"\
   "    }"\
   " "\
   "    override void OnDeactivate(IEntity ent)"\
-  "    {        "\
-  "        // exit everything"\
+  "    {"\
   "		fia_alive = false;"\
-  "		PrintFormat(\"Agent died.\");"\
-  "		GetGame().GetCallqueue().CallLater(HintEnd, 10000, false);"\
-  "		GetGame().GetCallqueue().CallLater(OnEmptied, 20000, false);"\
+  "		string agentName = GetAgentPlayerName(ent);"\
+  "		float elapsedTime = GetDuration();"\
+  "		PrintFormat(\"WITA: Agent %1 died after %2 seconds.\", agentName, elapsedTime);"\
   "		"\
+  "		SaveHighscore(agentName, elapsedTime);"\
+  "		"\
+  "		GetGame().GetCallqueue().CallLater(ShowEndResults, 10000, false);"\
+  "		GetGame().GetCallqueue().CallLater(OnEmptied, 20000, false);"\
   "    }"\
   "	"\
-  "	void HintEnd()"\
+  "	void ShowEndResults()"\
   "	{"\
   "		float elapsedTime = GetDuration();"\
-  "		string m_elapsedTimeString = string.Format(\"Time elapsed: %1 min\", elapsedTime/60);"\
-  "		SCR_HintManagerComponent.GetInstance().ShowCustomHint(m_elapsedTimeString, \"Hunt Duration\", 3.0); "\
+  "		float elapsedMin = elapsedTime / 60.0;"\
+  "		string currentRunText = string.Format(\"This round: %1 min\", elapsedMin);"\
+  "		string highscoreText = FormatHighscores();"\
+  "		"\
+  "		Rpc(RpcDo_ShowHighscores, highscoreText, currentRunText);"\
+  "		RpcDo_ShowHighscores(highscoreText, currentRunText);"\
   "	}"\
   " "\
   "    void OnEmptied()"\
   "    {"\
-  "        SCR_BaseGameMode gameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode()); // Get the game mode for the end script"\
-  "        Faction faction = GetGame().GetFactionManager().GetFactionByKey(\"US\"); // Get the winning faction Key"\
-  "        int usIndex = GetGame().GetFactionManager().GetFactionIndex(faction); // Get the winning faction key's index"\
+  "        SCR_BaseGameMode gameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode());"\
+  "        Faction faction = GetGame().GetFactionManager().GetFactionByKey(\"US\");"\
+  "        int usIndex = GetGame().GetFactionManager().GetFactionIndex(faction);"\
   "		"\
   "		float elapsedTime = GetDuration();"\
-  "		PrintFormat(\"Endgame triggered: %1 - time elapsed: %2 min\", faction, elapsedTime/60);"\
+  "		PrintFormat(\"WITA: Endgame triggered - time elapsed: %1 min\", elapsedTime / 60.0);"\
   "		"\
-  "		gameMode.EndGameMode(SCR_GameModeEndData.CreateSimple(SCR_GameModeEndData.ENDREASON_EDITOR_FACTION_VICTORY, -1, usIndex)); // End the mission!"\
+  "		gameMode.EndGameMode(SCR_GameModeEndData.CreateSimple(SCR_GameModeEndData.ENDREASON_EDITOR_FACTION_VICTORY, -1, usIndex));"\
   "    }"
   TriggerShapeType Sphere
   SphereRadius 10000
