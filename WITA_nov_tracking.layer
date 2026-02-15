@@ -55,13 +55,12 @@ SCR_MapLocator WITA_MapLocator {
  "            // Print(\"Group Member checking\");"\
  "			// Faction factionPlayer = GetGame().GetFactionManager().GetFactionByIndex(player);"\
  "			"\
- "			// not sure if necessary"\
  "			if (!player)"\
- "				return;"\
+ "				continue;"\
  "			"\
  "			Faction factionPlayer = respComp.GetPlayerFaction(player);"\
  "			if (!factionPlayer)"\
- "				return;"\
+ "				continue;"\
  "			Print(factionPlayer.GetFactionName());"\
  "			Print(factionFIA.GetFactionName());"\
  "			"\
@@ -80,7 +79,7 @@ SCR_MapLocator WITA_MapLocator {
  "		SCR_HintManagerComponent hintComponent = SCR_HintManagerComponent.GetInstance();"\
  "		hintComponent.ShowCustomHint(\"Near \" + closestLocationName, \"Agent Location\", 20);"\
  "		"\
- "		SCR_ParticleEmitter fxEffect = SCR_ParticleEmitter.CreateEx(SCR_ParticleEmitterClass, \"{7B4A41DA320475FF}Smoke.ptc\", agentPosition);"\
+ "		SCR_ParticleEmitter fxEffect = SCR_ParticleEmitter.CreateEx(SCR_ParticleEmitterClass, \"{7B4A41DA320475FF}Particles/Editor/Photo/Smoke.ptc\", agentPosition);"\
  "	}"\
  "	"\
  "	protected void CalculateClosestLocation(IEntity playerEnt)"\
@@ -156,13 +155,15 @@ SCR_MapLocator WITA_MapLocator {
  "		"\
  "		int playerGridID = GetGridIndex(playerGridPositionX,playerGridPositionY);"\
  "		if (lastDistance < 40000) {"\
- "			// todo add logic to differentiate here"\
  "			Rpc(RpcDo_maplocatorShowHint, closestLocationName, posPlayer);"\
- "			Print(\"sending shit\");"\
+ "			RpcDo_maplocatorShowHint(closestLocationName, posPlayer);"\
+ "			Print(\"Agent close to location, broadcasting hint with particle\");"\
  "		} else"\
  "		{"\
- "			Rpc(RpcDo_maplocatorShowHint, closestLocationName, posPlayer);"\
- "			Print(\"sending shit\");"\
+ "			string directionHint = closeLocationAzimuth + \" of \" + closestLocationName;"\
+ "			Rpc(RpcDo_maplocatorShowHint, directionHint, posPlayer);"\
+ "			RpcDo_maplocatorShowHint(directionHint, posPlayer);"\
+ "			Print(\"Agent far from location, broadcasting directional hint\");"\
  "		}"\
  "	}"
  m_WorldDirections SCR_MapLocationQuadHint "{5C42FEA1AE6C685A}" {
